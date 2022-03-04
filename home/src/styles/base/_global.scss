@@ -5,14 +5,19 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 
 body {
-  background-image: url('https://wallpaperaccess.com/full/283883.jpg');
+  background-image: url("https://wallpaperaccess.com/full/283883.jpg");
   background-size: cover;
+  overflow-y: hidden;
+  overflow-x: hidden;
 }
 @font-face {
   font-family: Header;
-  src: url('../Fonts/OldSport01CollegeNcv-aeGm.ttf');
+  src: url("../Fonts/OldSport01CollegeNcv-aeGm.ttf");
 }
 @font-face {
   font-family: Header2;
-  src: url('../Fonts/OldSport02AthleticNcv-E0gj.ttf');
+  src: url("../Fonts/OldSport02AthleticNcv-E0gj.ttf");
+}
+a {
+  text-decoration: none;
 }

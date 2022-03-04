@@ -1,13 +1,15 @@
-.body{
-    width:60rem;
-    height:48rem;
-    background-color:black;
-    opacity: .8;
-    position: absolute;
-    top:3em;
-    left:18rem;
-    margin-left: auto;
-    margin-right: auto;
-    border-radius:.75rem;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+.body {
+  width: 60rem;
+  height: 48rem;
+  background-color: black;
+  opacity: 0.8;
+  position: absolute;
+  top: 3em;
+  left: 18rem;
+  margin-left: auto;
+  margin-right: auto;
+  border-radius: 0.75rem;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px,
+    rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
 }
