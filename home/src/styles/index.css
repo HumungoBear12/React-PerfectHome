@@ -23,13 +23,15 @@ summary {
 }
 
 html {
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
 }
 
 *,
 *::after,
 *::before {
-  box-sizing: inherit;
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
 }
 
 img,
@@ -51,6 +53,7 @@ blockquote,
 q {
   quotes: none;
 }
+
 blockquote::before, blockquote::after,
 q::before,
 q::after {
@@ -99,19 +102,19 @@ pre {
   word-wrap: break-word;
 }
 
-input [type=radio] {
+input [type="radio"] {
   vertical-align: text-bottom;
 }
 
-input [type=checkbox] {
+input [type="checkbox"] {
   vertical-align: bottom;
 }
 
-.ie7 input [type=checkbox] {
+.ie7 input [type="checkbox"] {
   vertical-align: baseline;
 }
 
-.ie6 input[type=checkbox] {
+.ie6 input[type="checkbox"] {
   vertical-align: text-bottom;
 }
 
@@ -146,15 +149,15 @@ sub {
 
 .clickable,
 label,
-input[type=button],
-input[type=submit],
-input[type=file],
+input[type="button"],
+input[type="submit"],
+input[type="file"],
 button {
   cursor: pointer;
 }
 
 button,
-input[type=button] {
+input[type="button"] {
   width: auto;
   overflow: hidden;
 }
@@ -190,10 +193,12 @@ body {
   font-family: Header;
   src: url("../Fonts/OldSport01CollegeNcv-aeGm.ttf");
 }
+
 @font-face {
   font-family: Header2;
   src: url("../Fonts/OldSport02AthleticNcv-E0gj.ttf");
 }
+
 a {
   text-decoration: none;
 }
@@ -212,21 +217,38 @@ a {
   width: 60%;
   margin-left: auto;
   margin-right: auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: center;
-  align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   height: 10rem;
   border-radius: 0.75rem;
   position: relative;
-  box-shadow: rgba(34, 34, 34, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+  -webkit-box-shadow: rgba(34, 34, 34, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+          box-shadow: rgba(34, 34, 34, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
   top: 6rem;
 }
+
 .banner .banner-title {
   color: #1e00ff;
   font-size: 6rem;
   text-align: center;
   font-weight: bolder;
   font-family: Header2;
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    width: 20rem;
+  }
+  .banner .banner-title {
+    font-size: 3rem;
+  }
 }
 
 .body {
@@ -240,14 +262,22 @@ a {
   margin-left: auto;
   margin-right: auto;
   border-radius: 0.75rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+
+@media screen and (max-width: 786px) {
+  .body {
+    width: 30rem;
+  }
 }
 
 #slideshow {
   margin: 0 auto;
   height: 630px;
   width: 100%;
-  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
   position: relative;
   top: 3rem;
 }
@@ -303,7 +333,8 @@ a {
 .entire-content {
   margin: auto;
   width: 190px;
-  perspective: 1000px;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
   position: relative;
   padding-top: 80px;
 }
@@ -314,7 +345,8 @@ a {
   float: right;
   -webkit-animation: rotar 30s infinite linear;
           animation: rotar 30s infinite linear;
-  transform-style: preserve-3d;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
 .content-carrousel figure {
@@ -326,80 +358,99 @@ a {
 }
 
 .content-carrousel figure:nth-child(1) {
-  transform: rotateY(0deg) translateZ(300px);
+  -webkit-transform: rotateY(0deg) translateZ(300px);
+          transform: rotateY(0deg) translateZ(300px);
 }
 
 .content-carrousel figure:nth-child(2) {
-  transform: rotateY(40deg) translateZ(300px);
+  -webkit-transform: rotateY(40deg) translateZ(300px);
+          transform: rotateY(40deg) translateZ(300px);
 }
 
 .content-carrousel figure:nth-child(3) {
-  transform: rotateY(80deg) translateZ(300px);
+  -webkit-transform: rotateY(80deg) translateZ(300px);
+          transform: rotateY(80deg) translateZ(300px);
 }
 
 .content-carrousel figure:nth-child(4) {
-  transform: rotateY(120deg) translateZ(300px);
+  -webkit-transform: rotateY(120deg) translateZ(300px);
+          transform: rotateY(120deg) translateZ(300px);
 }
 
 .content-carrousel figure:nth-child(5) {
-  transform: rotateY(160deg) translateZ(300px);
+  -webkit-transform: rotateY(160deg) translateZ(300px);
+          transform: rotateY(160deg) translateZ(300px);
 }
 
 .content-carrousel figure:nth-child(6) {
-  transform: rotateY(200deg) translateZ(300px);
+  -webkit-transform: rotateY(200deg) translateZ(300px);
+          transform: rotateY(200deg) translateZ(300px);
 }
 
 .content-carrousel figure:nth-child(7) {
-  transform: rotateY(240deg) translateZ(300px);
+  -webkit-transform: rotateY(240deg) translateZ(300px);
+          transform: rotateY(240deg) translateZ(300px);
 }
 
 .content-carrousel figure:nth-child(8) {
-  transform: rotateY(280deg) translateZ(300px);
+  -webkit-transform: rotateY(280deg) translateZ(300px);
+          transform: rotateY(280deg) translateZ(300px);
 }
 
 .content-carrousel figure:nth-child(9) {
-  transform: rotateY(320deg) translateZ(300px);
+  -webkit-transform: rotateY(320deg) translateZ(300px);
+          transform: rotateY(320deg) translateZ(300px);
 }
 
 .content-carrousel figure:nth-child(10) {
-  transform: rotateY(360deg) translateZ(300px);
+  -webkit-transform: rotateY(360deg) translateZ(300px);
+          transform: rotateY(360deg) translateZ(300px);
 }
 
 .shadow {
   position: absolute;
-  box-shadow: 0px 0px 20px 0px #030063;
+  -webkit-box-shadow: 0px 0px 20px 0px #030063;
+          box-shadow: 0px 0px 20px 0px #030063;
   border-radius: 1px;
 }
 
 .content-carrousel img {
   image-rendering: auto;
+  -webkit-transition: all 300ms;
   transition: all 300ms;
   width: 100%;
   height: 20rem;
 }
 
 .content-carrousel img:hover {
-  transform: scale(1.2);
+  -webkit-transform: scale(1.2);
+          transform: scale(1.2);
+  -webkit-transition: all 400ms;
   transition: all 400ms;
 }
 
 @-webkit-keyframes rotar {
   from {
-    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
   }
   to {
-    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
   }
 }
 
 @keyframes rotar {
   from {
-    transform: rotateY(0deg);
+    -webkit-transform: rotateY(0deg);
+            transform: rotateY(0deg);
   }
   to {
-    transform: rotateY(360deg);
+    -webkit-transform: rotateY(360deg);
+            transform: rotateY(360deg);
   }
 }
+
 .IMAGE_MOVIE {
   height: 20rem;
   width: 0rem;
@@ -413,9 +464,15 @@ a {
   top: 2rem;
   position: relative;
   border-radius: 0.75rem;
-  justify-content: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: none;
 }
 
@@ -427,9 +484,15 @@ a {
   top: 2rem;
   position: relative;
   border-radius: 0.75rem;
-  justify-content: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: none;
 }
 
@@ -441,9 +504,15 @@ a {
   top: 2rem;
   position: relative;
   border-radius: 0.75rem;
-  justify-content: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: none;
 }
 
@@ -455,9 +524,15 @@ a {
   top: 2rem;
   position: relative;
   border-radius: 0.75rem;
-  justify-content: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: none;
 }
 
@@ -469,9 +544,15 @@ a {
   top: 2rem;
   position: relative;
   border-radius: 0.75rem;
-  justify-content: flex-start;
-  flex-direction: row;
-  flex-wrap: wrap;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   display: none;
 }
 
@@ -480,7 +561,8 @@ a {
   width: 12rem;
   margin-top: 1rem;
   margin-left: 1.9rem;
-  box-shadow: 0px 0px 20px 0px #030063;
+  -webkit-box-shadow: 0px 0px 20px 0px #030063;
+          box-shadow: 0px 0px 20px 0px #030063;
   border-radius: 0.75rem;
 }
 
@@ -541,11 +623,14 @@ a {
   top: 0rem;
   left: 2rem;
   margin-top: 2rem;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+  -webkit-box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+          box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
   background-color: lightgray;
   opacity: 0.9;
 }
+
 .Logo-container .logo {
   height: 10rem;
   width: 12rem;
-}/*# sourceMappingURL=index.css.map */
+}
+/*# sourceMappingURL=index.css.map */
